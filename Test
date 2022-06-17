@@ -1,0 +1,25 @@
+class CensoTest {
+
+    @Test
+    void deveContarclientesAtivosloja() {
+        Loja Loja = new loja(
+                new Cliente("Aline", true),
+                new Cliente("Tadeu", true),
+                new Cliente("Fernanda", false),
+                new Cliente("Joana", true)
+        );
+        assertEquals(3, Censo.contarClintesAtivosLoja(loja));
+    }
+
+    @Test
+    void deveContarTotalClienteloja() {
+        Loja Loja  = new loja(
+                new Cliente("Aline", true),
+                new Cliente("Tadeu", true),
+                new Cliente("Fernanda", false),
+                new Cliente("Joana", true)
+        );
+        assertEquals(4, Censo.contarTotalClienteLoja(loja));
+    }
+
+}
